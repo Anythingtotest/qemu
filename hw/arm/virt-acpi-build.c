@@ -124,7 +124,7 @@ static void acpi_dsdt_add_ehci(Aml *scope, const MemMapEntry *ehci_memmap,
                               uint32_t ehci_irq)
 {
     Aml *dev = aml_device("USB0");
-    aml_append(dev, aml_name_decl("_HID", aml_string("PNP0D20")));
+    aml_append(dev, aml_name_decl("_HID", aml_string("TXI_USBEHCI")));
     aml_append(dev, aml_name_decl("_UID", aml_int(0)));
 
     Aml *crs = aml_resource_template();
